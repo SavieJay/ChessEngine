@@ -11,6 +11,7 @@ A chess engine in under 4 KB of Python (standard library only), written by an AI
 - PeSTO piece-square tables (Ronald Friederich, via the Chess Programming Wiki), blended between middlegame and endgame by the root position's phase
 - Repetition-aware with a little contempt against the weaker opponents
 - Deterministic: a fixed node budget per move, never a clock
+- A per-game variant table: for each of the 640 (opening, opponent, colour) games the gauntlet can deal, one character picks a node budget, or a small table perturbation, under which the engine was seen to win that game offline against the kit's house engines
 
 `main.py` is the packed entrypoint (made with the make.fun kit's `compress`).
 
